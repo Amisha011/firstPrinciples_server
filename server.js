@@ -2,6 +2,7 @@ const express = require(`express`);
 const cors = require(`cors`);
 const bodyParser = require(`body-parser`);
 const mongoose = require(`mongoose`);
+require("dotenv").config();
 //const User=require("./models/user.schema")
 
 
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 
 
 //mongodb url
-const dbURL = "mongodb+srv://Amisha:amisha011@cluster0.dujaf.mongodb.net/FirstPrincipals?retryWrites=true&w=majority"
+const dbURL =process.env.URL
 //coonecting with db
 
 //connect with mongoose
